@@ -20,13 +20,22 @@ export const MultipleCustomHooks = () => {
           )
       }
 
-      <button className="btn btn-primary mt-2" onClick={() => increment(1)}>
+      <button className="btn btn-primary mt-2" 
+      disabled = { isLoading }
+      onClick = {() => increment(1)}
+      >
         Next quote
       </button>
-      <button className="btn btn-primary mt-2" onClick={() => decrement(1)}>
+      <button className="btn btn-primary mt-2" 
+      disabled = { isLoading }
+      onClick={() => decrement(1)}
+      >
         Back quote
       </button>
-      <button className="btn btn-primary mt-2" onClick={reset}>
+      <button className="btn btn-primary mt-2" 
+      disabled = { isLoading }
+      onClick={reset}
+      >
         Reset
       </button>
 
